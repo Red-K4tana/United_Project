@@ -1,0 +1,16 @@
+
+
+.spanClassName {
+    cursor: default;
+}
+.spanClassName:hover {
+    cursor: default;
+    border-bottom: 1px solid #2c364a;
+}
+.inputInHW6 {
+    margin: 0;
+    font-size: 15px;
+    width: 150px;
+    height: 16px;
+}
+

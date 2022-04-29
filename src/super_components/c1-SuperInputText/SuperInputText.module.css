@@ -1,0 +1,30 @@
+.superInput {
+
+}
+
+
+.errorInput {
+    margin: 10px 10px;
+    border: 0 solid;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 1px #ffffff;
+    width: 150px;
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+    transition: .3s box-shadow;
+}
+.errorInput:hover {
+    box-shadow: 0 0 5px 1px #fff;
+    transition: .3s box-shadow;
+}
+.errorInput:focus {
+    outline:none !important;
+    box-shadow: 0 0 5px 1px #fff;
+}
+
+.error { /*текст ошибки*/
+    color: #7c2e2e;
+}
+
+

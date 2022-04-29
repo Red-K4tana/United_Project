@@ -1,0 +1,25 @@
+.inputRadio {
+    display: none;
+}
+.spanClassName {
+    padding-left: 10px;
+    font-weight: bold;
+
+}
+
+.spanClassName:before {
+    content: '';
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+
+    vertical-align: middle;
+    margin: 0 10px;
+    transition: 0.2s;
+
+    background-image: url("https://img.icons8.com/fluency/20/000000/unchecked-radio-button.png");
+}
+.inputRadio:checked + .spanClassName:before {
+    background-image: url("https://img.icons8.com/fluency/20/000000/checked-radio-button.png");
+
+}
