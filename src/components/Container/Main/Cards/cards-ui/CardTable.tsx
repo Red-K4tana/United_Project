@@ -6,6 +6,8 @@ import {useAppDispatch, useAppSelector} from "../../../../../store/store";
 import style from "./CardTable.module.css";
 import {Paginator} from "../../../../../common/paginator/Paginator";
 import {addCardsTC, getCardsTC} from "../cards-bll/cardsReducer";
+import {Loader} from "../../../../features/loader/loader";
+import {ModalWindow} from "../../../../features/modalWindow/modalWindow";
 
 export const CardTable = () => {
     const cards = useAppSelector(store => store.cards)
@@ -24,13 +26,20 @@ export const CardTable = () => {
 
 
     const addCardsHandler = () => {
-        dispatch(addCardsTC(tempPackID, currentPage, selectPageCount))
+        /*dispatch(addCardsTC(tempPackID, currentPage, selectPageCount))*/
+        modalActiveHandler(true)
+    }
+
+    const [modalActive, setModalActive] = useState<boolean>(false)
+    const modalActiveHandler = (flag: boolean) => {
+        setModalActive(flag)
     }
 
     return (
         <div className={style.cardTable__container}>
-            {/*<SuperModalWindow activeModal={activeModal} activationModalWindow={activationModalWindow}/> */}
+            <ModalWindow modalActive={modalActive} modalActiveHandler={modalActiveHandler}/>
             <h2>Some pack...</h2>
+            <Loader />
             <div className={style.cardTable__find_and_addCard}>
                 <div className={style.cardTable__find}>
                     <SuperInputText label={'Question'}/>
