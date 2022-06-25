@@ -37,7 +37,14 @@ export const CardTable = () => {
 
     return (
         <div className={style.cardTable__container}>
-            <ModalWindow modalActive={modalActive} modalActiveHandler={modalActiveHandler}/>
+            <ModalWindow modalActive={modalActive} modalActiveHandler={modalActiveHandler}>
+                <h3>Рыба</h3>
+                <input type='text'  placeholder={'Рыба Рыба Рыба Рыба Рыба'}/>
+                <h3>Рыба</h3>
+                <input type='text'  placeholder={'Рыба Рыба Рыба Рыба Рыба'}/>
+                <h3>Рыба</h3>
+                <input type='text'  placeholder={'Рыба Рыба Рыба Рыба Рыба'}/>
+            </ModalWindow>
             <h2>Some pack...</h2>
             <Loader />
             <div className={style.cardTable__find_and_addCard}>
